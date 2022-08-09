@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class StudentsService {
   students = [
-    { id: 1, name: 'Sunil' },
+    { id: 1, name: 'Sunil kumar' },
     { id: 2, name: 'Satish' },
     { id: 3, name: 'Praveen' },
     { id: 4, name: 'Hari' },
