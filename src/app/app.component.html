@@ -1,0 +1,40 @@
+<div class="container text-center">
+  <h1>TASK by Using Directives</h1>
+  <div *ngIf="employee.length > 0; then thenBlock; else elseBlock"></div>
+
+  <ng-template #thenBlock>
+    <ul class="list group">
+      <li class="list-group-item" *ngFor="let data of employee">
+        UserId:{{ data.userId }} | Id:{{ data.id }} | Title:{{ data.title }} |
+        Body:{{ data.body }}
+      </li>
+    </ul>
+  </ng-template>
+
+  <ng-template #elseBlock>
+    <div>No Employee Data Found</div>
+  </ng-template>
+
+  <h1>TASK by using Directives</h1>
+  <ng-template
+    ngFor
+    let-data
+    [ngForOf]="digits"
+    let-isEven="even"
+    let-isOdd="odd"
+  >
+    <div>
+      <font color="red" *ngIf="isOdd">
+        {{ data + " is Odd" }}
+      </font>
+      <font color="blue" *ngIf="isEven">
+        {{ data + " is Even" }}
+      </font>
+    </div>
+  </ng-template>
+
+  <app-parent></app-parent>
+  <app-parent-message></app-parent-message>
+  <app-parent2></app-parent2>
+  <app-parent3></app-parent3>
+</div>

@@ -1,0 +1,8 @@
+<h2>Child2 Component</h2>
+
+<table class="table table-striped">
+  <tr *ngFor="let data of allStudents | async">
+    <td>{{ data.id }}</td>
+    <td>{{ data.name }}</td>
+  </tr>
+</table>

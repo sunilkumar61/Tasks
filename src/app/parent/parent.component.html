@@ -1,0 +1,11 @@
+<hr />
+<h1>TASK by Using EventEmiter</h1>
+
+<h2>Parent Component</h2>
+
+<h3>Value of Child Data:</h3>
+<ul class="list-group">
+  <li class="list-group-item" *ngFor="let data of Cdata">{{ data }}</li>
+</ul>
+
+<app-child (childEvent)="onChanges($event)"></app-child>
